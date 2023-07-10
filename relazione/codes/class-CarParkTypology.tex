@@ -1,0 +1,13 @@
+<owl:Class rdf:about="https://w3id.org/italia/onto/PARK/CarParkTypology">
+  <rdfs:label xml:lang="en">Car Park Typology</rdfs:label>
+  <rdfs:label xml:lang="it">Tipologia di Parcheggio</rdfs:label>
+  <rdfs:subClassOf rdf:resource="&l0;Topic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/isCarParkTypologyOf"/>
+      <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+        
+  <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
+</owl:Class>

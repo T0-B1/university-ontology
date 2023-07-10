@@ -1,0 +1,38 @@
+\newcommand{\centeredImage}[4] {
+    \begin{figure}[H]
+    	\begin{center}
+    		\includegraphics[width=#3\linewidth]{#1}
+    		\caption{#2}
+            {#4}
+    	\end{center}
+    \end{figure}
+}
+
+\newcommand{\centeredBigImage}[2] {
+    \centeredImage{#1}{#2}{1}
+}
+
+\newcommand{\cUrlBackGray}[1]{
+    \begin{quote}
+        \centering
+        \colorbox{Gainsboro}{\url{#1}}
+    \end{quote}
+}
+
+\newcommand{\cFUrlBackGray}[1]{
+    \begin{quote}
+        \centering
+        \colorbox{Gainsboro}{\texttt{#1}}
+    \end{quote}
+}
+
+\newcommand{\objPropertyInv}[5]{
+    \item \textbf{#1}
+
+    {#5}
+    \begin{itemize}
+        \item [-] Range: {#3}
+        \item [-] Domain: {#4}
+        \item [-] Inverse of: \textbf{#2}
+    \end{itemize}
+}

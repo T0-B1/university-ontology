@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper,openright]{report}
+\input{packages}
+\input{functions/commands}
+\input{code-presentation-specs}
+\addbibresource{bibliography.bib}
+
+
+\crefname{lstlisting}{listing}{listato}
+\Crefname{lstlisting}{Listing}{Listato}
+
+% \lstset{basicstyle=\small\ttfamily}
+\lstset{
+	showstringspaces=false,
+	basicstyle=\small\ttfamily,
+	commentstyle={\color{olive}},
+	identifierstyle=\color{black},
+	ndkeywordstyle={\color{blue}},
+	stringstyle={\color{magenta}},
+	emphstyle={},
+	keywordstyle={\color{blue}},
+	breaklines=true,
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	numbersep=10pt,
+	tabsize=2,
+	extendedchars=true,
+	frame=trBL,
+	frameround=fttt
+}
+\pagenumbering{arabic}   
+
+\newcommand{\redCor}[1]{\textbf{\textcolor{red}{#1}}}
+
+\title{Relazione Secondo Progetto \\ Corso Web Semantico \\ University Ontology}
+\author{Martignano Alessandro, Tinti Angelo}
+\date{A.A. 2022/2023}
+
+\begin{document}
+
+% Line strike through color
+% \setstcolor{red}
+
+\maketitle
+
+\tableofcontents
+
+\include{chapters/introduction}
+\include{chapters/chapter_01}
+\include{chapters/chapter_02}
+\include{chapters/chapter_03}
+\include{chapters/conclusion}
+% \include{chapters/esperimenti-codice}
+
+\printbibliography
+
+\end{document}
