@@ -66,6 +66,10 @@ Nella maggior parte dei casi le diverse proprietà oggetto presentano anche la p
 Le proprietà che presentano la relazione inversa sono:
 
 \begin{itemize}
+    
+    \objPropertyInv{has department}{is department of}{Organization}{Department}%
+    {Proprietà che permette di legare dei dipartimenti ad un'università. \textcolor{red}{VALUTARE SE AGGIUNGERE ALTRO}}
+  
     \objPropertyInv{has campus}{is campus of}{Organization}{Campus}%
     {Proprietà utilizzata per indicare i campus relativi ad un'università, la proprietà inversa permette di risalire all'università di cui fa parte il campus della relazione.
     \\
@@ -74,23 +78,27 @@ Le proprietà che presentano la relazione inversa sono:
     \objPropertyInv{has programme}{is programme of}{Campus}{Programme}%
     {Proprietà che mette in relazione un campus e un Corso di Laurea da esso fornito; un campus può avere più CdL inoltre il legame che intercorre fra i due non implica che le lezioni degli insegnamenti di un corso di laurea avvengano nel campus di cui quest'ultimo è parte.}
 
-    \objPropertyInv{has programme edition}{is programme edition of}{Programme}{Programme Edition}{Proprietà che permette di denotare l'edizione di un Corso di Laurea, questo per permettere di avere ogni anno dei cambiamenti come spesso avviene, in questo modo possono cambiare i corsi che lo compongono e modificare anche l'ordine degli esami negli anni e/o semestri.}
+    \objPropertyInv{has programme edition}{is programme edition of}{Programme}{Programme Edition}%
+    {Proprietà che permette di denotare l'edizione di un Corso di Laurea, questo per permettere di avere ogni anno dei cambiamenti come spesso avviene, in questo modo possono cambiare i corsi che lo compongono e modificare anche l'ordine degli esami negli anni e/o semestri.}
+
+    \objPropertyInv{has programme year}{is programme year of}{Programme Edition}{Programme Year}%
+    {Proprietà per creare la relazione l'edizione di un Corso di Laurea con gli anni da cui esso è composto. Le triennali avranno quindi primo, secondo e terzo anno, le magistrali primo e secondo (relativamente al tipo di magistrale), ecc.}
     
     \objPropertyInv{has course edition}{is course edition of}{Course}{Course Edition}%
-    {Proprietà che permette }
+    {Proprietà che permette di avere differenti edizioni di un insegnamento, così come avviene per i corsi di laurea. In diverse università i corsi mantengono le stesse informazioni principali, come codici che li distinguono, ma effettuano dei cambiamenti negli anni come ad esempio fare riferimento a differenti libri di testo, cambiare le modalità di esame, cambiare semestre, ecc. Questa modellazione permette di farlo andando a creare un nuovo corso ogni anno.
+    \textcolor{red}{e se questa proprietà la usassimo anche per gli anni? così da non creare un'ulteriore proprietà usabile con una sola classe.}}
 
-    \objPropertyInv{has department}{is department of}{Organization}{Department}{aa}
-
-    \objPropertyInv{has exam}{is exam of}{Course Edition}{Exam}{aa}w
+    \objPropertyInv{has exam}{is exam of}{Course Edition}{Exam}%
+    {Proprietà usata per indicare gli esami di un insegnamento.}
     
-    \objPropertyInv{has lecture}{is lecture of}{Course Edition}{Lecture}{aa}
+    \objPropertyInv{has lecture}{is lecture of}{Course Edition}{Lecture}%
+    {Proprietà usata per indicare le lezioni di un insegnamento.}
 
+    \objPropertyInv{has room}{is room of}{Campus}{Room}%
+    {Proprietà usata per indicare le stanze presenti in un campus, esse possono essere di varia natura come si è visto in \cref{figs:location-hierarchy}/}
 
-    \objPropertyInv{has programme year}{is programme year of}{Programme Edition}{Programme Year}{aa}
-
-    \objPropertyInv{has room}{is room of}{Campus}{Room}{aa}
-
-    \objPropertyInv{teaches}{is taught by}{Professor}{Course Edition}{aa}
+    \objPropertyInv{teaches}{is taught by}{Professor}{Course Edition}%
+    {Proprietà usata per descrivere la relazione fra un professare e gli insegnamenti da lui tenuti. Siccome la relazione ha come dominio le edizioni dei corsi, ogni anno un professore è legato nuovamente con il medesimo corso se continua ad insegnarlo. Lo abbiamo però ritenuto opportuno dato che ciò permette di tenere traccia degli insegnamenti tenuti nei diversi anni da un professore.}
 
 \end{itemize}
 
