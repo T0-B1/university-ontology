@@ -84,6 +84,8 @@ Le proprietà che presentano la relazione inversa sono:
     \objPropertyInv{has programme year}{is programme year of}{Programme Edition}{Programme Year}%
     {Proprietà per creare la relazione l'edizione di un Corso di Laurea con gli anni da cui esso è composto. Le triennali avranno quindi primo, secondo e terzo anno, le magistrali primo e secondo (relativamente al tipo di magistrale), ecc.}
     
+    \objPropertyInv{has course}{is course of}{Programme Year}{Course Edition}{\textcolor{red}{se usassimo has course edition al posto di questa?}}
+
     \objPropertyInv{has course edition}{is course edition of}{Course}{Course Edition}%
     {Proprietà che permette di avere differenti edizioni di un insegnamento, così come avviene per i corsi di laurea. In diverse università i corsi mantengono le stesse informazioni principali, come codici che li distinguono, ma effettuano dei cambiamenti negli anni come ad esempio fare riferimento a differenti libri di testo, cambiare le modalità di esame, cambiare semestre, ecc. Questa modellazione permette di farlo andando a creare un nuovo corso ogni anno.
     \textcolor{red}{e se questa proprietà la usassimo anche per gli anni? così da non creare un'ulteriore proprietà usabile con una sola classe.}}
@@ -102,4 +104,19 @@ Le proprietà che presentano la relazione inversa sono:
 
 \end{itemize}
 
+Le proprietà che oggetto che non presentano una relazione inversa sono di un numero abbastanza inferiore rispetto le precedenti e abbiamo:
 
+\begin{itemize}
+  \objPropertyNotInv{belongs to department}{Professor}{Department}%
+  {Proprietà che permette di descrivere la relazione fra un professore e il dipartimento di cui fa parte.}
+
+  \objPropertyNotInv{belongs to scientific disciplinary area}{Professor, Course}{Scientific Disciplinary Area}%
+  {Proprietà che permette di modellare la relazione di appartenza ad un settore scientifico disciplinare (SSD). Tale proprietà è presente sia per i professori sia per gli insegnamenti erogati. Osservando le strutture organizzative delle università abbiamo constato che tale appartenenza vincola i professori ad insegnare corsi del medesimo SSD a cui essi appartengono, quindi un professore di un SSD può insegnare un corso con SSD differente.}
+
+  \objPropertyNotInv{has course book}{Course Edition}{Book}
+  {Proprietà usata per descrivere la relazione fra l'edizione di un insegnamento e i libri di testo che vengono utilizzati. "Book" è una classe dell'ontologia Bibo importata all'interno del progetto.}
+\end{itemize}
+
+\section{Proprietà dei dati}
+
+\textcolor{red}{AGGIUNGERE NELL'ONTOLOGIA E NELLA RELAZIONE}

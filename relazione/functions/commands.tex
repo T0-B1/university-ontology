@@ -26,13 +26,42 @@
     \end{quote}
 }
 
+% \newcommand{\objPropertyNotInv}[4]{
+%     % \item \textbf{#1}
+    
+%     % {#4}
+%     % \begin{itemize}
+%     %     \item [-] Range: {#2}
+%     %     \item [-] Domain: {#3}
+%     % \end{itemize}
+% }
+
+% \newcommand{\objPropertyInv}[5]{
+%     % \item \textbf{#1}
+    
+%     % {#5}
+%     % \begin{itemize}
+%         %     \item [-] Range: {#3}
+%         %     \item [-] Domain: {#4}
+%         %     \item [-] Inverse of: \textbf{#2}
+%         % \end{itemize}
+%         }
+
+\newcommand{\objPropertyNotInv}[4]{
+    \objProp{#1}{}{#2}{#3}{#4}
+}
+
 \newcommand{\objPropertyInv}[5]{
+    \objProp{#1}{\item [-] Inverse of: \textbf{#2}}{#3}{#4}{#5}
+}
+        
+\newcommand{\objProp}[5]{
     \item \textbf{#1}
 
     {#5}
     \begin{itemize}
         \item [-] Range: {#3}
         \item [-] Domain: {#4}
-        \item [-] Inverse of: \textbf{#2}
+        {#2}
     \end{itemize}
 }
