@@ -268,6 +268,37 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/headOfDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/headOfDepartment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/headedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
+        <rdfs:label xml:lang="it">dirigente del dipartimento</rdfs:label>
+        <rdfs:label xml:lang="en">head of department</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/headedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/headedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
+        <rdfs:label xml:lang="it">diretto da</rdfs:label>
+        <rdfs:label xml:lang="en">headed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/heldInCampus -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/heldInCampus">
@@ -335,6 +366,21 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Organization"/>
         <rdfs:label xml:lang="en">is department of</rdfs:label>
         <rdfs:label xml:lang="it">è dipartimento di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isEmailOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isEmailOf">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
+        <rdfs:label xml:lang="en">is email of</rdfs:label>
+        <rdfs:label xml:lang="it">è il contatto email di</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -443,6 +489,45 @@
     
 
 
+    <!-- http://www.w3.org/2006/vcard/ns#email -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasEmail -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
+        <rdfs:comment xml:lang="it">Per specificare l&apos;indirizzo mail per comunicare con l&apos;oggetto.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha contatto email</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasTelephone -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#tel -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#tel">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -454,9 +539,23 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/firstName">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">first name</rdfs:label>
+        <rdfs:label xml:lang="it">nome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasAbbreviatedName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasAbbreviatedName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="it">ha nome abbreviato</rdfs:label>
         <rdfs:label xml:lang="en">has abbreviated name</rdfs:label>
     </owl:DatatypeProperty>
@@ -490,6 +589,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/identifiedByOrganizationCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/identifiedByOrganizationCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Il personale all&apos;interno di un&apos;università è identificato da un codice interno.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Staff of an university is identified by a code internal code.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificato dal codice dell&apos;organizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">identified by organization code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isInSemester -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isInSemester">
@@ -501,12 +613,43 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mailContact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mailContact">
+        <rdfs:label xml:lang="en">mail contact</rdfs:label>
+        <rdfs:label>indirizzo mail</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneNumber">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="it">numero di telefono</rdfs:label>
+        <rdfs:label xml:lang="en">phone number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/principalAddress -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/principalAddress">
         <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="it">indirizzo principale</rdfs:label>
         <rdfs:label xml:lang="en">principal address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -688,6 +831,15 @@ La durata della laurea triennale varia solitamente da tre a quattro anni, a seco
         <rdfs:label xml:lang="en">Disciplinary Scientific Area</rdfs:label>
         <rdfs:label xml:lang="it">Settore Scientifico Disciplinare</rdfs:label>
         <rdfs:seeAlso xml:lang="it">https://it.wikipedia.org/wiki/Settore_scientifico-disciplinare per i settori scientifici disciplinari nelle università italiane.</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email">
+        <rdfs:comment xml:lang="en">Email</rdfs:comment>
+        <rdfs:comment xml:lang="it">Email</rdfs:comment>
     </owl:Class>
     
 
@@ -962,10 +1114,37 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956">
+        <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DipartimentoDiArchitettura-UniBo"/>
+        <ns1:hasEmail rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it"/>
+        <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358"/>
+        <firstName>Fabrizio Ivan</firstName>
+        <identifiedByOrganizationCode>30956</identifiedByOrganizationCode>
+        <surname>Apollonio</surname>
+        <rdfs:label>Apollonio Fabrizio Ivan 30956</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo">
+        <principalAddress>Via Cesare Pavese, 50</principalAddress>
+        <ns1:country-name>Italia</ns1:country-name>
+        <ns1:locality>Cesena</ns1:locality>
+        <ns1:postal-code>47522</ns1:postal-code>
+        <ns1:region>Forlì-Cesena</ns1:region>
+        <rdfs:label xml:lang="it">Campus di Cesena</rdfs:label>
+        <rdfs:label xml:lang="en">Campus of Cesena</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DipartimentoDiArchitettura-UniBo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DipartimentoDiArchitettura-UniBo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
         <hasAbbreviatedName>DA</hasAbbreviatedName>
         <ns1:street-address>Via dell&apos;Università 50</ns1:street-address>
         <rdfs:label xml:lang="en">Architecture Department - University of Bologna</rdfs:label>
@@ -995,14 +1174,33 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna">
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Organization"/>
+        <hasCampus rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
         <hasAbbreviatedName>UniBo</hasAbbreviatedName>
         <principalAddress>Via Zamboni, 33</principalAddress>
         <ns1:country-name>Italia</ns1:country-name>
+        <ns1:locality>Bologna</ns1:locality>
         <ns1:organization-name>Alma Mater Sutiorum - Università di Bologna</ns1:organization-name>
         <ns1:postal-code>61505</ns1:postal-code>
+        <ns1:region>Bologna</ns1:region>
         <rdfs:label xml:lang="en">Alma Mater Studiorum - University of Bologna</rdfs:label>
         <rdfs:label xml:lang="it">Alma Mater Studiorum - Università di Bologna</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358">
+        <phoneNumber>+390547338358</phoneNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it">
+        <mailContact>fabrizio.apollonio@unibo.it</mailContact>
+        <rdfs:label>fabrizio.apollonio@unibo.it</rdfs:label>
     </owl:NamedIndividual>
     
 
