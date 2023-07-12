@@ -10,6 +10,9 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8">
         <owl:imports rdf:resource="http://purl.org/ontology/bibo/"/>
@@ -26,6 +29,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -489,6 +498,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/workFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/workFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Organization"/>
+        <rdfs:label xml:lang="it">lavora per</rdfs:label>
+        <rdfs:label xml:lang="en">work for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#adr -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#adr">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.w3.org/2006/vcard/ns#email -->
 
     <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#email">
@@ -542,7 +572,6 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/firstName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/firstName">
-        <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">first name</rdfs:label>
@@ -616,8 +645,8 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mailContact -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mailContact">
-        <rdfs:label xml:lang="en">mail contact</rdfs:label>
         <rdfs:label>indirizzo mail</rdfs:label>
+        <rdfs:label xml:lang="en">mail contact</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1117,13 +1146,29 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956">
-        <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DipartimentoDiArchitettura-UniBo"/>
+        <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna"/>
         <ns1:hasEmail rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it"/>
         <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358"/>
         <firstName>Fabrizio Ivan</firstName>
         <identifiedByOrganizationCode>30956</identifiedByOrganizationCode>
         <surname>Apollonio</surname>
+        <ns1:family-name>Apollonio</ns1:family-name>
         <rdfs:label>Apollonio Fabrizio Ivan 30956</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna">
+        <isDepartmentOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
+        <ns1:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <hasAbbreviatedName>DA</hasAbbreviatedName>
+        <ns1:organization-name>Dipartimento di Architettura</ns1:organization-name>
+        <rdfs:comment xml:lang="en">Alma Mater Studiorum University of Bologna - Department of Architecture</rdfs:comment>
+        <rdfs:comment xml:lang="it">Alma Mater Studiorum Università di Bologna - Dipartimento di Architettura</rdfs:comment>
+        <rdfs:label xml:lang="en">UniBo - DA</rdfs:label>
+        <rdfs:label xml:lang="it">UniBo - DA</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1131,42 +1176,56 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo">
-        <principalAddress>Via Cesare Pavese, 50</principalAddress>
-        <ns1:country-name>Italia</ns1:country-name>
-        <ns1:locality>Cesena</ns1:locality>
-        <ns1:postal-code>47522</ns1:postal-code>
-        <ns1:region>Forlì-Cesena</ns1:region>
+        <ns1:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220"/>
         <rdfs:label xml:lang="it">Campus di Cesena</rdfs:label>
         <rdfs:label xml:lang="en">Campus of Cesena</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DipartimentoDiArchitettura-UniBo -->
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DipartimentoDiArchitettura-UniBo">
-        <hasAbbreviatedName>DA</hasAbbreviatedName>
-        <ns1:street-address>Via dell&apos;Università 50</ns1:street-address>
-        <rdfs:label xml:lang="en">Architecture Department - University of Bologna</rdfs:label>
-        <rdfs:label xml:lang="it">Dipartimento Di Architettura - Università di Bologna</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna">
+        <isDepartmentOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
+        <ns1:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <hasAbbreviatedName>DISI</hasAbbreviatedName>
+        <ns1:organization-name>Dipartimento di Ingegneria e Scienze Informatiche</ns1:organization-name>
+        <rdfs:comment xml:lang="en">Alma Mater Studiorum University Of Bologna - Computer Science and Engineering Department</rdfs:comment>
+        <rdfs:comment xml:lang="it">Alma Mater Studiorum Università di Bologna - Dipartimento di Ingegneria e Scienze Informatiche</rdfs:comment>
+        <rdfs:label xml:lang="en">UniBO - DISI</rdfs:label>
+        <rdfs:label xml:lang="it">UniBo - DISI</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ISI-LM-Cesena -->
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/GabrielliMaurizio34486 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ISI-LM-Cesena">
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MasterDegree"/>
-        <hasTotalCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120</hasTotalCFU>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/GabrielliMaurizio34486">
+        <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
+        <ns1:hasEmail rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it"/>
+        <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500"/>
+        <firstName>Maurizio</firstName>
+        <identifiedByOrganizationCode>34486</identifiedByOrganizationCode>
+        <surname>Gabrielli</surname>
+        <ns1:family-name>Gabrielli</ns1:family-name>
+        <rdfs:label xml:lang="en">Gabrielli Maurizio 34486</rdfs:label>
+        <rdfs:label xml:lang="it">Gabrielli Maurizio 34486</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ISI-Triennale -->
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ISI-Triennale">
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/BachelorDegree"/>
-        <hasTotalCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180</hasTotalCFU>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress">
+        <ns1:country-name>Italy</ns1:country-name>
+        <ns1:locality>Bologna</ns1:locality>
+        <ns1:postal-code>40126</ns1:postal-code>
+        <ns1:region>Bologna</ns1:region>
+        <ns1:street-address>Via Zamboni 33</ns1:street-address>
+        <rdfs:comment xml:lang="it">Indirizzo dell&apos;università di Bologna</rdfs:comment>
+        <rdfs:comment xml:lang="en">University of Bologna Address</rdfs:comment>
+        <rdfs:label>Bologna, via Zamboni 33</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1175,15 +1234,35 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna">
         <hasCampus rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <ns1:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress"/>
         <hasAbbreviatedName>UniBo</hasAbbreviatedName>
-        <principalAddress>Via Zamboni, 33</principalAddress>
-        <ns1:country-name>Italia</ns1:country-name>
-        <ns1:locality>Bologna</ns1:locality>
         <ns1:organization-name>Alma Mater Sutiorum - Università di Bologna</ns1:organization-name>
-        <ns1:postal-code>61505</ns1:postal-code>
-        <ns1:region>Bologna</ns1:region>
         <rdfs:label xml:lang="en">Alma Mater Studiorum - University of Bologna</rdfs:label>
         <rdfs:label xml:lang="it">Alma Mater Studiorum - Università di Bologna</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <ns1:country-name>Italy</ns1:country-name>
+        <ns1:locality>Cesena</ns1:locality>
+        <ns1:postal-code>47521</ns1:postal-code>
+        <ns1:region>Forlì-Cesena</ns1:region>
+        <ns1:street-address>Via dell&apos;Università 50</ns1:street-address>
+        <rdfs:label xml:lang="en">Cesena, via dell&apos;università 50</rdfs:label>
+        <rdfs:label xml:lang="it">Cesena, via dell&apos;università 50</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500">
+        <phoneNumber>+390512094500</phoneNumber>
+        <rdfs:comment xml:lang="it">Numero di telefono del Professore Maurizio Gabrielli</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1192,6 +1271,16 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358">
         <phoneNumber>+390547338358</phoneNumber>
+        <rdfs:comment xml:lang="it">Numero di telefono del Professore Fabrizio Ivan Apollonio</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220">
+        <phoneNumber>0547338220</phoneNumber>
+        <rdfs:comment xml:lang="it">Numero di telefono dell&apos;università di Cesena</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1201,6 +1290,15 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it">
         <mailContact>fabrizio.apollonio@unibo.it</mailContact>
         <rdfs:label>fabrizio.apollonio@unibo.it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it">
+        <mailContact>maurizio.gabrielli@unibo.it</mailContact>
+        <rdfs:label>maurizio.gabbrielli@unibo.it</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1220,6 +1318,107 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MasterDegree"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/SingleCycleDegree"/>
         </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/uni">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/headOfDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/belongsToDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/belongsToDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isDepartmentOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/uni"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/workFor"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/uni"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 
