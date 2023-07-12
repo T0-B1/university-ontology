@@ -15,7 +15,6 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8">
-        <owl:imports rdf:resource="http://purl.org/ontology/bibo/"/>
         <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
     </owl:Ontology>
     
@@ -78,496 +77,21 @@
     
 
 
-    <!-- http://purl.org/ontology/bibo/affirmedBy -->
+    <!-- http://purl.org/dc/terms/hasPart -->
 
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/affirmedBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isReferencedBy"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/LegalCaseDocument"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/LegalCaseDocument"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
     
 
 
-    <!-- http://purl.org/ontology/bibo/annotates -->
+    <!-- http://purl.org/dc/terms/isPartOf -->
 
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/annotates">
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
     
 
 
-    <!-- http://purl.org/ontology/bibo/authorList -->
+    <!-- http://purl.org/dc/terms/isReferencedBy -->
 
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/authorList">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/citedBy -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/citedBy">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/cites -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/cites">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/contributorList -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/contributorList">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/court -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/court">
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/degree -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/degree">
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/director -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/director">
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/distributor -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/distributor">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/editor -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/editor">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/editorList -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/editorList">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/interviewee -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/interviewee">
-        <rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/interviewer -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/interviewer">
-        <rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/issuer -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/issuer">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/organizer -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/organizer">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/owner -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/owner">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/performer -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/performer">
-        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/presentedAt -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/presentedAt">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/presents -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/presents">
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/producer -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/producer">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/recipient -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/recipient">
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/reproducedIn -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/reproducedIn">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/reversedBy -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/reversedBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isReferencedBy"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/LegalCaseDocument"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/LegalCaseDocument"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/reviewOf -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/reviewOf">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/status -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/status">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/subsequentLegalDecision -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/subsequentLegalDecision">
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/LegalCaseDocument"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/LegalCaseDocument"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/transcriptOf -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/transcriptOf">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/translationOf -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/translationOf">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/translator -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/translator">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isReferencedBy"/>
     
 
 
@@ -579,10 +103,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
         <rdfs:label xml:lang="it">appartiene al dipartimento</rdfs:label>
         <rdfs:label xml:lang="en">belongs to department</rdfs:label>
@@ -599,10 +119,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Course"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DisciplinaryScientificArea"/>
         <rdfs:label xml:lang="it">appartiene al settore scientifico disciplinare</rdfs:label>
         <rdfs:label xml:lang="en">belongs to disciplinary scientific area</rdfs:label>
@@ -643,17 +161,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourseBook">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/Book"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:label xml:lang="en">has course book</rdfs:label>
         <rdfs:label xml:lang="it">usa il libro di testo</rdfs:label>
     </owl:ObjectProperty>
@@ -665,10 +172,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourseEdition">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseEditionOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Course"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:label xml:lang="it">ha edizione dell&apos;insegnamento</rdfs:label>
         <rdfs:label xml:lang="en">has course edition</rdfs:label>
@@ -802,10 +307,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
         <rdfs:label xml:lang="it">dirigente del dipartimento</rdfs:label>
         <rdfs:label xml:lang="en">head of department</rdfs:label>
@@ -822,10 +325,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:label xml:lang="it">diretto da</rdfs:label>
         <rdfs:label xml:lang="en">headed by</rdfs:label>
     </owl:ObjectProperty>
@@ -866,11 +367,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseEditionOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Course"/>
         <rdfs:label xml:lang="en">is course edition of</rdfs:label>
         <rdfs:label xml:lang="it">è edizione dell&apos;insegnamento</rdfs:label>
     </owl:ObjectProperty>
@@ -911,9 +410,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:label xml:lang="en">is email of</rdfs:label>
         <rdfs:label xml:lang="it">è il contatto email di</rdfs:label>
     </owl:ObjectProperty>
@@ -929,7 +426,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticEvent"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:label xml:lang="en">is exam of</rdfs:label>
         <rdfs:label xml:lang="it">è esame di</rdfs:label>
@@ -946,7 +442,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticEvent"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:label xml:lang="en">is lecture of</rdfs:label>
         <rdfs:label xml:lang="it">è lezione di </rdfs:label>
@@ -1009,12 +504,38 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:label xml:lang="en">is taught by</rdfs:label>
         <rdfs:label>è insegnato da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/locationUsedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/locationUsedFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/takePlaceIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneOf">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/takePlaceIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/takePlaceIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Location"/>
+        <rdfs:label xml:lang="en">take place in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1026,10 +547,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:label xml:lang="it">insegna</rdfs:label>
         <rdfs:label xml:lang="en">teaches</rdfs:label>
@@ -1042,9 +561,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/workFor">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Organization"/>
         <rdfs:label xml:lang="it">lavora per</rdfs:label>
         <rdfs:label xml:lang="en">work for</rdfs:label>
@@ -1131,9 +648,7 @@
 
     <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#email">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
         <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Email"/>
     </rdf:Description>
@@ -1229,9 +744,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
         <rdfs:comment xml:lang="it">Per specificare l&apos;indirizzo mail per comunicare con l&apos;oggetto.</rdfs:comment>
         <rdfs:label xml:lang="it">ha contatto email</rdfs:label>
@@ -1557,681 +1070,9 @@
     
 
 
-    <!-- http://prismstandard.org/namespaces/1.2/basic/doi -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/doi">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/doi"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/identifier"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/eIssn -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/eIssn">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/eissn"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/identifier"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Collection"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/edition -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/edition">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/edition"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/endingPage -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/endingPage">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/pageEnd"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/isbn -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/isbn">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/identifier"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/isbn"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/issn -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/issn">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/identifier"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/issn"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Collection"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/issue -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/issue">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/issue"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/CollectedDocument"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Issue"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Article"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/number -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/number">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/locator"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/startingPage -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/startingPage">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/pageStart"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://prismstandard.org/namespaces/1.2/basic/volume -->
-
-    <rdf:Description rdf:about="http://prismstandard.org/namespaces/1.2/basic/volume">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/volume"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/argued -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/argued">
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/chapter -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/chapter">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/number"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/DocumentPart"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/content -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/content">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/doi -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/doi">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/doi"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/edition -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/edition">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/edition"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/eissn -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/eissn">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/eIssn"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/isbn -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/isbn">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/isbn"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/isbn10 -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/isbn10">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/isbn"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/isbn13 -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/isbn13">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/isbn"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/issn -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/issn">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/issn"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/issue -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/issue">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/issue"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/CollectedDocument"/>
-        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Article"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/locator -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/locator">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/number"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/numPages -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/numPages">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/numVolumes -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/numVolumes">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/number -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/number">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/pageEnd -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/pageEnd">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/endingPage"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/pageStart -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/pageStart">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/startingPage"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/pages -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/pages">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/number"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/prefixName -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/prefixName">
-        <rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/section -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/section">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/number"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/shortDescription -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/shortDescription">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/shortTitle -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/shortTitle">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/suffixName -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/suffixName">
-        <rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/volume -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/volume">
-        <rdfs:subPropertyOf rdf:resource="http://prismstandard.org/namespaces/1.2/basic/volume"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </rdf:Description>
-    
-
-
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/firstName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/firstName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">first name</rdfs:label>
         <rdfs:label xml:lang="it">nome</rdfs:label>
@@ -2338,8 +1179,6 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname">
         <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2349,8 +1188,6 @@
 
     <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#family-name">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </rdf:Description>
     
 
@@ -2360,12 +1197,6 @@
     <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/principalAddress"/>
     </rdf:Description>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/firstName -->
-
-    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName"/>
     
 
 
@@ -2392,12 +1223,6 @@
     
 
 
-    <!-- http://dati.gov.it/onto/dcatapit#Distribution -->
-
-    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Distribution"/>
-    
-
-
     <!-- http://dati.gov.it/onto/dcatapit#Organization -->
 
     <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Organization"/>
@@ -2410,517 +1235,15 @@
     
 
 
-    <!-- http://purl.org/dc/terms/Agent -->
+    <!-- http://purl.org/NET/c4dm/event.owl#Event -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/terms/Agent">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    </rdf:Description>
+    <owl:Class rdf:about="http://purl.org/NET/c4dm/event.owl#Event"/>
     
 
 
     <!-- http://purl.org/dc/terms/Standard -->
 
     <owl:Class rdf:about="http://purl.org/dc/terms/Standard"/>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Article -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Article">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/AudioDocument -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/AudioDocument">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/AudioVisualDocument -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/AudioVisualDocument">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Bill -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Bill">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Book -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Book">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/BookSection -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/BookSection">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Brief -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Brief">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Chapter -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Chapter">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/DocumentPart"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Code -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Code">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Collection"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Issue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/CollectedDocument -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/CollectedDocument">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Collection -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/CourtReporter -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/CourtReporter">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Collection"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Issue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Document -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/DocumentPart -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/DocumentPart">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/EditedBook -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/EditedBook">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Excerpt -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Excerpt">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Image -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Image">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Issue -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Issue">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Journal -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Journal">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Collection"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/LegalDecision -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/LegalDecision">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/LegalDocument -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/LegalDocument">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Magazine -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Magazine">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Collection"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Manual -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Manual">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Manuscript -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Manuscript">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Map -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Map">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/MultiVolumeBook -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/MultiVolumeBook">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Newspaper -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Newspaper">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Collection"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Note -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Note">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Patent -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Patent">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Periodical -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Periodical">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/PersonalCommunicationDocument -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/PersonalCommunicationDocument">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Quote -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Quote">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/DocumentPart"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/ReferenceSource -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/ReferenceSource">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Report -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Report">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Series -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Series">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Slide -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Slide">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Slideshow -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Slideshow">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Specification -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Specification">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Statute -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Statute">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Thesis -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Thesis">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Webpage -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Webpage">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/Website -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Website">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
     
 
 
@@ -3077,12 +1400,6 @@ La durata della laurea triennale varia solitamente da tre a quattro anni, a seco
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticEvent"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson"/>
-        <rdfs:comment xml:lang="en">Class to describe university exams.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Classe descrivere esami universitari, essi possono avere un luogo ed un orario.</rdfs:comment>
-        <rdfs:label xml:lang="it">Esame</rdfs:label>
-        <rdfs:label xml:lang="en">Exam</rdfs:label>
     </owl:Class>
     
 
@@ -3091,11 +1408,6 @@ La durata della laurea triennale varia solitamente da tre a quattro anni, a seco
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticEvent"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
-        <rdfs:comment xml:lang="en">Class to describe university lessons.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Classe per descrivere lezioni universitarie.</rdfs:comment>
-        <rdfs:label xml:lang="en">Lesson</rdfs:label>
-        <rdfs:label xml:lang="it">Lezione</rdfs:label>
     </owl:Class>
     
 
@@ -3147,20 +1459,10 @@ I programmi di laurea magistrale richiedono generalmente uno o due anni di studi
     
 
 
-    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person">
-        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
         <rdfs:comment xml:lang="en">Class to describe university professors.</rdfs:comment>
         <rdfs:comment xml:lang="it">Classe per modellare i professori universitari.</rdfs:comment>
         <rdfs:label xml:lang="en">Professor</rdfs:label>
@@ -3250,7 +1552,6 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdfs:comment xml:lang="en">Class to describe university staff.</rdfs:comment>
         <rdfs:comment xml:lang="it">Classe per descrivere lo staff di un&apos;università.</rdfs:comment>
         <rdfs:label xml:lang="en">Staff</rdfs:label>
@@ -3261,7 +1562,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
 
-    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -3270,13 +1571,13 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq -->
 
-    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -3285,7 +1586,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -3495,44 +1796,6 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Agent -->
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </owl:Class>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/Document -->
-
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/Image -->
-
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Image">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Image"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/Person -->
-
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/#Person -->
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/#Person"/>
-    
-
-
     <!-- https://w3id.org/italia/onto/COV/LegalStatus -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/COV/LegalStatus"/>
@@ -3574,30 +1837,12 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
-    <!-- http://purl.org/ontology/bibo/bdarcus -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/bdarcus">
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/fgiasson -->
-
-    <rdf:Description rdf:about="http://purl.org/ontology/bibo/fgiasson">
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956">
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <belongsToDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna"/>
         <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna"/>
         <workFor rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
@@ -3647,6 +1892,36 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.1-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.1-CesenaCampus">
+        <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <rdfs:label xml:lang="it">Campus di Cesena - Aula 2.1</rdfs:label>
+        <rdfs:label xml:lang="en">Cesena Campus - Classroom 2.1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus">
+        <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <rdfs:label xml:lang="it">Campus di Cesena - Aula 2.12</rdfs:label>
+        <rdfs:label xml:lang="en">Cesena Campus - Classroom 2.12</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus">
+        <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <rdfs:label xml:lang="it">Campus di Cesena - Aula 2.9</rdfs:label>
+        <rdfs:label xml:lang="en">Cesena Campus - Classroom 2.9</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna">
@@ -3659,8 +1934,24 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
         <ns1:organization-name>Dipartimento di Ingegneria e Scienze Informatiche</ns1:organization-name>
         <rdfs:comment xml:lang="en">Alma Mater Studiorum University Of Bologna - Computer Science and Engineering Department</rdfs:comment>
         <rdfs:comment xml:lang="it">Alma Mater Studiorum Università di Bologna - Dipartimento di Ingegneria e Scienze Informatiche</rdfs:comment>
-        <rdfs:label xml:lang="en">UniBO - DISI</rdfs:label>
+        <rdfs:label xml:lang="en">UniBo - DISI</rdfs:label>
         <rdfs:label xml:lang="it">UniBo - DISI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam-ObjectOrientedProgramming-2024-01-10-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam-ObjectOrientedProgramming-2024-01-10-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam-ObjectOrientedProgramming-2024-01-24-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam-ObjectOrientedProgramming-2024-01-24-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.1-CesenaCampus"/>
     </owl:NamedIndividual>
     
 
@@ -3668,11 +1959,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/GabrielliMaurizio34486 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/GabrielliMaurizio34486">
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <belongsToDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
         <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
         <workFor rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
@@ -3690,10 +1977,177 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-2022-2023-UniBo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-2022-2023-UniBo">
+        <hasProgrammeYear rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/year-2-8615-2023-2024-Unibo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-UniBo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-UniBo">
+        <hasEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-2022-2023-UniBo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-2.2-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-2.2-CesenaCampus">
+        <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <rdfs:label xml:lang="it">Campus di Cesena - Laboratorio 2.2</rdfs:label>
+        <rdfs:label xml:lang="en">Cesena Campus - Laboratory 2.2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.1-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.1-CesenaCampus">
+        <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <rdfs:label xml:lang="it">Campus di Cesena - Laboratorio 3.1</rdfs:label>
+        <rdfs:label xml:lang="en">Cesena Campus - Laboratory 3.1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus">
+        <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <rdfs:label xml:lang="it">Campus di Cesena - Laboratorio 3.3</rdfs:label>
+        <rdfs:label xml:lang="en">Cesena Campus - Laboratory 3.3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-04-10-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-04-10-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-06-10-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-06-10-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-11-10-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-11-10-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-13-10-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-13-10-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-18-10-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-18-10-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-20-10-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-20-10-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-25-10-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-25-10-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-09-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-09-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-10-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-10-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-29-09-2023-CesenaCampus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-29-09-2023-CesenaCampus">
+        <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MirkoViroli35642 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MirkoViroli35642">
         <belongsToDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
+        <ns1:email rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mirko.viroli@unibo.it"/>
+        <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338846"/>
+        <firstName>Mirko</firstName>
+        <identifiedByOrganizationCode>35642</identifiedByOrganizationCode>
+        <surname>Viroli</surname>
+        <ns1:family-name>Viroli</ns1:family-name>
+        <rdfs:label xml:lang="en">Viroli Mirko 35642</rdfs:label>
+        <rdfs:label xml:lang="it">Viroli Mirko 35642</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-2023-2024-CampusDiCesena-UniversitàDiBologna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-2023-2024-CampusDiCesena-UniversitàDiBologna">
+        <hasExam rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam-ObjectOrientedProgramming-2024-01-10-CesenaCampus"/>
+        <hasExam rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam-ObjectOrientedProgramming-2024-01-24-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-04-10-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-06-10-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-11-10-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-13-10-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-18-10-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-20-10-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-25-10-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-09-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-10-2023-CesenaCampus"/>
+        <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-29-09-2023-CesenaCampus"/>
+        <isTaughtBy rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MirkoViroli35642"/>
+        <rdfs:label xml:lang="en">UniBo - ISI - OOP - 70219 - 2023 - 2024</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-CampusDiCesena-UniversitàDiBologna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-CampusDiCesena-UniversitàDiBologna">
+        <hasCourseEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-2023-2024-CampusDiCesena-UniversitàDiBologna"/>
+        <hasCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</hasCFU>
+        <identifiedByOrganizationCode>70219</identifiedByOrganizationCode>
+        <ns1:given-name>Programmazione ad Oggetti</ns1:given-name>
+        <rdfs:label xml:lang="en">UniBo - ISI - OOP - 70219</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3880,6 +2334,16 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/year-2-8615-2023-2024-Unibo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/year-2-8615-2023-2024-Unibo">
+        <hasCourseEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-2023-2024-CampusDiCesena-UniversitàDiBologna"/>
+        <rdfs:comment xml:lang="en">Second year of bachelor degree &quot;Computer Science and Engineering&quot; with code 8615 of University of Bologna</rdfs:comment>
+        <rdfs:label xml:lang="en">UniBo - ISI - 8615 - Year 2 - AA - 2023/2024</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500">
@@ -3896,6 +2360,15 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
         <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
         <phoneNumber>+390547338358</phoneNumber>
         <rdfs:comment xml:lang="it">Numero di telefono del Professore Fabrizio Ivan Apollonio</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338846 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338846">
+        <phoneNumber>+390547338846</phoneNumber>
+        <rdfs:comment xml:lang="it">Numero di telefono del Professore Mirko Viroli</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3929,7 +2402,18 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
         <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Email"/>
         <isEmailOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/GabrielliMaurizio34486"/>
         <mailContact>maurizio.gabrielli@unibo.it</mailContact>
-        <rdfs:label>maurizio.gabbrielli@unibo.it</rdfs:label>
+        <rdfs:label xml:lang="en">maurizio.gabbrielli@unibo.it</rdfs:label>
+        <rdfs:label xml:lang="it">maurizio.gabrielli@unibo.it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mirko.viroli@unibo.it -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mirko.viroli@unibo.it">
+        <mailContact>mirko.viroli@unibo.it</mailContact>
+        <rdfs:label xml:lang="en">mirko.viroli@unibo.it</rdfs:label>
+        <rdfs:label xml:lang="it">mirko.viroli@unibo.it</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4446,93 +2930,6 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
         </owl:unionOf>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
     </owl:Class>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-        <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Article"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-        <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Book"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-        <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Collection"/>
-                            <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-        <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Issue"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-        <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-        <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Legislation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/LegalDocument"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-        <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Slide"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-        <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Webpage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/bibo/Document"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -4552,6 +2949,15 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/exam">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/location">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/lesson">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
@@ -4564,7 +2970,121 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
-        <rdfs:label>S1</rdfs:label>
+        <rdfs:label>Exam take place in didactic room</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/exam"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/takePlaceIn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/exam"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/location"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Location"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/location"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticRoom"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/location"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Lesson take place in didactic room</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/lesson"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/takePlaceIn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/lesson"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/location"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Location"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/location"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticRoom"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/location"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Person who belongs to department work for to organization of which department is part</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -4611,7 +3131,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
-        <rdfs:label>S2</rdfs:label>
+        <rdfs:label>Pearson head of department belongs to department</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
