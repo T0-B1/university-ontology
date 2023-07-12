@@ -3251,7 +3251,6 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Person"/>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">Class to describe university staff.</rdfs:comment>
         <rdfs:comment xml:lang="it">Classe per descrivere lo staff di un&apos;università.</rdfs:comment>
         <rdfs:label xml:lang="en">Staff</rdfs:label>
@@ -3687,6 +3686,14 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
         <ns1:family-name>Gabrielli</ns1:family-name>
         <rdfs:label xml:lang="en">Gabrielli Maurizio 34486</rdfs:label>
         <rdfs:label xml:lang="it">Gabrielli Maurizio 34486</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MirkoViroli35642 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MirkoViroli35642">
+        <belongsToDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
     </owl:NamedIndividual>
     
 
