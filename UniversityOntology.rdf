@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/"
      xml:base="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/"
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:ns1="http://www.w3.org/2006/vcard/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -53,6 +54,54 @@
     <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasRankOrder -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/CLV/hasRankOrder"/>
     
 
 
@@ -151,13 +200,19 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Course"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DisciplinaryScientificArea"/>
         <rdfs:label xml:lang="it">appartiene al settore scientifico disciplinare</rdfs:label>
         <rdfs:label xml:lang="en">belongs to disciplinary scientific area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/duringAcademicYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/duringAcademicYear">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicYear"/>
+        <rdfs:label xml:lang="en">in academic year</rdfs:label>
+        <rdfs:label xml:lang="it">in anno accademico</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -182,6 +237,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourse">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammeYear"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:label xml:lang="it">ha insegnamento</rdfs:label>
@@ -195,6 +252,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourseBook">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseBookOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:label xml:lang="en">has course book</rdfs:label>
         <rdfs:label xml:lang="it">usa il libro di testo</rdfs:label>
@@ -257,8 +316,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticEvent"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Exam"/>
         <rdfs:label xml:lang="it">ha esame</rdfs:label>
         <rdfs:label xml:lang="en">has exam</rdfs:label>
@@ -275,11 +332,9 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticEvent"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson"/>
         <rdfs:label xml:lang="it">ha lezione</rdfs:label>
-        <rdfs:label xml:lang="en">has lecture</rdfs:label>
+        <rdfs:label xml:lang="en">has lesson</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -401,7 +456,11 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseBookOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseBookOf">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammeEdition"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
+        <rdfs:label xml:lang="en">is course book of</rdfs:label>
+        <rdfs:label xml:lang="it">è il libro di testo del corso</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -422,6 +481,8 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammeYear"/>
         <rdfs:label xml:lang="en">is course of</rdfs:label>
@@ -468,7 +529,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticEvent"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:label xml:lang="en">is exam of</rdfs:label>
         <rdfs:label xml:lang="it">è esame di</rdfs:label>
@@ -484,9 +544,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DidacticEvent"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
-        <rdfs:label xml:lang="en">is lecture of</rdfs:label>
+        <rdfs:label xml:lang="en">is lesson of</rdfs:label>
         <rdfs:label xml:lang="it">è lezione di </rdfs:label>
     </owl:ObjectProperty>
     
@@ -546,9 +605,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
         <rdfs:label xml:lang="en">is taught by</rdfs:label>
         <rdfs:label>è insegnato da</rdfs:label>
     </owl:ObjectProperty>
@@ -559,8 +616,12 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/locationUsedFor">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/takePlaceIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Location"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Event"/>
+        <rdfs:label xml:lang="en">location used for</rdfs:label>
+        <rdfs:label xml:lang="it">luogo usato per</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -569,6 +630,24 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneOf">
         <owl:inverseOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:label xml:lang="en">is phone of</rdfs:label>
+        <rdfs:label xml:lang="it">è il telefono di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/startedInAcademicYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/startedInAcademicYear">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicYear"/>
+        <rdfs:label xml:lang="it">iniziato nell&apos;anno accademico</rdfs:label>
+        <rdfs:label xml:lang="en">started in academic year</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -589,9 +668,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
         <rdfs:label xml:lang="it">insegna</rdfs:label>
         <rdfs:label xml:lang="en">teaches</rdfs:label>
@@ -1141,6 +1218,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/atTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/atTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="en">at time</rdfs:label>
+        <rdfs:label xml:lang="it">in orario</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/date">
+        <rdfs:label xml:lang="it">data</rdfs:label>
+        <rdfs:label xml:lang="en">date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/endingYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/endingYear">
+        <rdfs:label xml:lang="en">ending year</rdfs:label>
+        <rdfs:label xml:lang="it">termina nell&apos;anno</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/firstName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/firstName">
@@ -1245,6 +1350,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/roomNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/roomNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/startingYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/startingYear">
+        <rdfs:label xml:lang="it">inizia nell&apos;anno</rdfs:label>
+        <rdfs:label xml:lang="en">starting year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname">
@@ -1252,6 +1376,12 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/yearOfProgramme -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/yearOfProgramme"/>
     
 
 
@@ -1285,18 +1415,6 @@
     <!-- http://dati.gov.it/onto/dcatapit#Agent -->
 
     <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Agent"/>
-    
-
-
-    <!-- http://dati.gov.it/onto/dcatapit#Dataset -->
-
-    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Dataset"/>
-    
-
-
-    <!-- http://dati.gov.it/onto/dcatapit#Organization -->
-
-    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Organization"/>
     
 
 
@@ -1360,16 +1478,19 @@ Lo staff accademico comprende una varietà di professionisti con competenze spec
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicYear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicYear">
+        <rdfs:label xml:lang="en">Academic Year</rdfs:label>
+        <rdfs:label xml:lang="it">Anno Accademico</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/BachelorDegree -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/BachelorDegree">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Programme"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasTotalCFU"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Class to describe bachelor degree.
 A bachelor&apos;s degree is an undergraduate academic degree awarded upon the completion of a specific program of study. It is typically the first level of higher education and is obtained after completing a prescribed number of credits or courses in a particular field of study.
 Bachelor&apos;s degrees usually require three to four years of full-time study, depending on the country and the educational system.
@@ -1462,6 +1583,7 @@ La durata della laurea triennale varia solitamente da tre a quattro anni, a seco
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DisciplinaryScientificArea -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/DisciplinaryScientificArea">
+        <owl:equivalentClass rdf:resource="https://w3id.org/italia/onto/HER/ScientificDisciplinarySector"/>
         <rdfs:comment xml:lang="en">Class to describe disciplinary scientific area. They represent a set of disciplinary distinctions aimed at organizing higher education, as adopted in Italian universities.</rdfs:comment>
         <rdfs:comment xml:lang="en">Classe per modellare i settori scientifico-disciplinari. Rappresentano un insieme di distinzioni disciplinare volto ad organizzare l&apos;istruzione superiore adottato nelle università italiane.</rdfs:comment>
         <rdfs:label xml:lang="en">Disciplinary Scientific Area</rdfs:label>
@@ -1522,12 +1644,6 @@ La durata della laurea triennale varia solitamente da tre a quattro anni, a seco
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MasterDegree">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Programme"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasTotalCFU"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Class to describe master degrees.
 A master&apos;s degree is a postgraduate academic degree that is typically pursued after completing a bachelor&apos;s degree. It provides students with advanced knowledge and expertise in a specific field of study.
 Master&apos;s degree programs usually require one to two years of additional study beyond the bachelor&apos;s degree. They often involve a combination of coursework, research, and sometimes a thesis or final project.</rdfs:comment>
@@ -1623,12 +1739,6 @@ L&apos;anno di un corso di laurea rappresenta tutti gli insegnamenti presenti in
 
     <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/SingleCycleDegree">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Programme"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasTotalCFU"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Class to describe single cycle degrees.
 The single cycle degree, known as &quot;Laurea Magistrale a Ciclo Unico&quot; in Italy, is a combined undergraduate and postgraduate degree program. It is offered in some countries, including Italy, and allows students to complete their entire university education in a single program.
 The single cycle degree typically spans five or six years of full-time study and integrates both undergraduate and master&apos;s level coursework. Upon completion, students are awarded a single degree that is equivalent to a master&apos;s degree.
@@ -1688,12 +1798,6 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
-
-    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     
 
 
@@ -1903,21 +2007,9 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
-    <!-- https://w3id.org/italia/onto/HER/AcademicRecruitementField -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/HER/AcademicRecruitementField"/>
-    
-
-
     <!-- https://w3id.org/italia/onto/HER/Area -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/HER/Area"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/HER/MacroSector -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/HER/MacroSector"/>
     
 
 
@@ -1941,9 +2033,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956">
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
         <belongsToDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna"/>
         <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna"/>
         <workFor rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
@@ -2009,6 +2099,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.1-CesenaCampus">
         <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <roomNumber>2.1</roomNumber>
         <rdfs:label xml:lang="it">Campus di Cesena - Aula 2.1</rdfs:label>
         <rdfs:label xml:lang="en">Cesena Campus - Classroom 2.1</rdfs:label>
     </owl:NamedIndividual>
@@ -2019,6 +2110,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus">
         <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <roomNumber>2.12</roomNumber>
         <rdfs:label xml:lang="it">Campus di Cesena - Aula 2.12</rdfs:label>
         <rdfs:label xml:lang="en">Cesena Campus - Classroom 2.12</rdfs:label>
     </owl:NamedIndividual>
@@ -2029,6 +2121,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus">
         <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <roomNumber>2.9</roomNumber>
         <rdfs:label xml:lang="it">Campus di Cesena - Aula 2.9</rdfs:label>
         <rdfs:label xml:lang="en">Cesena Campus - Classroom 2.9</rdfs:label>
     </owl:NamedIndividual>
@@ -2094,7 +2187,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-2022-2023-UniBo">
         <hasProgrammeYear rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/year-2-8615-2023-2024-Unibo"/>
-        <rdfs:comment xml:lang="en">Programme edition of &quot;Computer Science and Engineering&quot; starte in aa 2022/2023</rdfs:comment>
+        <startedInAcademicYear rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/2022-2023"/>
+        <rdfs:comment xml:lang="en">Programme edition of &quot;Computer Science and Engineering&quot; started in aa 2022/2023</rdfs:comment>
         <rdfs:label xml:lang="en">UniBo - ISI - 8615 - AA - 2022/2023</rdfs:label>
         <rdfs:label xml:lang="it">UniBo - ISI - 8615 - AA - 2022/2023</rdfs:label>
     </owl:NamedIndividual>
@@ -2104,7 +2198,9 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-UniBo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-UniBo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/BachelorDegree"/>
         <hasEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-2022-2023-UniBo"/>
+        <heldInCampus rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
         <rdfs:label xml:lang="en">UniBo - ISI - 8615</rdfs:label>
         <rdfs:label xml:lang="it">UniBo - ISI - 8615</rdfs:label>
     </owl:NamedIndividual>
@@ -2115,6 +2211,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-2.2-CesenaCampus">
         <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <roomNumber>2.2</roomNumber>
         <rdfs:label xml:lang="it">Campus di Cesena - Laboratorio 2.2</rdfs:label>
         <rdfs:label xml:lang="en">Cesena Campus - Laboratory 2.2</rdfs:label>
     </owl:NamedIndividual>
@@ -2125,6 +2222,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.1-CesenaCampus">
         <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <roomNumber>3.1</roomNumber>
         <rdfs:label xml:lang="it">Campus di Cesena - Laboratorio 3.1</rdfs:label>
         <rdfs:label xml:lang="en">Cesena Campus - Laboratory 3.1</rdfs:label>
     </owl:NamedIndividual>
@@ -2135,6 +2233,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus">
         <isRoomOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <roomNumber>3.3</roomNumber>
         <rdfs:label xml:lang="it">Campus di Cesena - Laboratorio 3.3</rdfs:label>
         <rdfs:label xml:lang="en">Cesena Campus - Laboratory 3.3</rdfs:label>
     </owl:NamedIndividual>
@@ -2145,6 +2244,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-04-10-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-10-04</date>
     </owl:NamedIndividual>
     
 
@@ -2153,6 +2254,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-06-10-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-10-06</date>
     </owl:NamedIndividual>
     
 
@@ -2161,6 +2264,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-11-10-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-10-11</date>
     </owl:NamedIndividual>
     
 
@@ -2169,6 +2274,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-13-10-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.12-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-10-13</date>
     </owl:NamedIndividual>
     
 
@@ -2177,6 +2284,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-18-10-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-10-18</date>
     </owl:NamedIndividual>
     
 
@@ -2185,6 +2294,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-20-10-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-10-20</date>
     </owl:NamedIndividual>
     
 
@@ -2193,6 +2304,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-25-10-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-10-25</date>
     </owl:NamedIndividual>
     
 
@@ -2201,6 +2314,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-09-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-09-27</date>
     </owl:NamedIndividual>
     
 
@@ -2209,6 +2324,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-10-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Laboratory-3.3-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-10-27</date>
     </owl:NamedIndividual>
     
 
@@ -2217,6 +2334,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-29-09-2023-CesenaCampus">
         <takePlaceIn rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Classroom-2.9-CesenaCampus"/>
+        <atTime>09:00</atTime>
+        <date>2023-09-29</date>
     </owl:NamedIndividual>
     
 
@@ -2263,6 +2382,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-CampusDiCesena-UniversitàDiBologna -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-CampusDiCesena-UniversitàDiBologna">
+        <belongsToSSD rdf:resource="https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-ING-INF-05"/>
         <hasCourseEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-2023-2024-CampusDiCesena-UniversitàDiBologna"/>
         <hasCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</hasCFU>
         <identifiedByOrganizationCode>70219</identifiedByOrganizationCode>
@@ -2466,7 +2586,9 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/year-2-8615-2023-2024-Unibo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/year-2-8615-2023-2024-Unibo">
+        <duringAcademicYear rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/2023-2024"/>
         <hasCourseEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-2023-2024-CampusDiCesena-UniversitàDiBologna"/>
+        <yearOfProgramme rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</yearOfProgramme>
         <rdfs:comment xml:lang="en">Second year of bachelor degree &quot;Computer Science and Engineering&quot; with code 8615 of University of Bologna</rdfs:comment>
         <rdfs:label xml:lang="it">UniBo - ISI - 8615 - AA - 2022/2023 - Anno - 2</rdfs:label>
         <rdfs:label xml:lang="en">UniBo - ISI - 8615 - AA - 2022/2023 - Year - 2</rdfs:label>
@@ -2513,6 +2635,26 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/2022-2023 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/2022-2023">
+        <endingYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</endingYear>
+        <startingYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</startingYear>
+        <rdfs:label>2022/2023</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/2023-2024 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/2023-2024">
+        <endingYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2024</endingYear>
+        <startingYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</startingYear>
+        <rdfs:label>2023/2024</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it">
@@ -2544,6 +2686,26 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
         <mailContact>mirko.viroli@unibo.it</mailContact>
         <rdfs:label xml:lang="en">mirko.viroli@unibo.it</rdfs:label>
         <rdfs:label xml:lang="it">mirko.viroli@unibo.it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-ING-INF-05 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-ING-INF-05">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/HER/ScientificDisciplinarySector"/>
+        <skos:broadMatch rdf:resource="https://w3id.org/italia/controlled-vocabulary/classifications-for-her/erc-panel-h2020-fp/PE6"/>
+        <skos:broadMatch rdf:resource="https://w3id.org/italia/controlled-vocabulary/classifications-for-her/fields-of-research-development/2"/>
+        <skos:broader rdf:resource="https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SC-09-H1"/>
+        <skos:definition xml:lang="en">Academic discipline</skos:definition>
+        <skos:definition xml:lang="it">Il settore scientifico-disciplinare sviluppa lo studio e la ricerca sulla storia del continente asiatico sotto il profilo sia territoriale che culturale e delle civiltà, con particolare riguardo alle aree del mondo musulmano, di India, Cina, Giappone, Vicino, Medio ed Estremo Oriente, e con un’attenzione particolare alla storia delle istituzioni politiche, sociali e religiose.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines"/>
+        <skos:notation>ING-INF/05</skos:notation>
+        <skos:prefLabel xml:lang="en">Information processing systems</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">Sistemi di elaborazione delle informazioni</skos:prefLabel>
+        <skos:relatedMatch rdf:resource="https://w3id.org/italia/controlled-vocabulary/classifications-for-culture/subject-disciplines/012-005"/>
+        <CLV:hasRankOrder>4</CLV:hasRankOrder>
     </owl:NamedIndividual>
     
 
@@ -3085,6 +3247,24 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/courseEdition">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/course">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ced">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ssd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/py">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pe">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/aa">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/exam">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
@@ -3142,6 +3322,122 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://purl.org/ontology/bibo/Book"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/document"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Course Edition belongs to same department that Generic Course belong</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Course"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/course"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ced"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/belongsToSSD"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/course"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ssd"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/belongsToSSD"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ced"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ssd"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Accademic year of a course edition is same of academic year of programme</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammeYear"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/py"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pe"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/duringAcademicYear"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/py"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/aa"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/duringAcademicYear"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pe"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/aa"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -3265,6 +3561,64 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
+        <rdfs:label>Staff head of department belongs to department and is a Professor</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/headOfDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/belongsToDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
         <rdfs:label>Person who belongs to department work for to organization of which department is part</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -3303,40 +3657,6 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/workFor"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/uni"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>Pearson head of department belongs to department</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/headOfDepartment"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/belongsToDepartment"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/dept"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
