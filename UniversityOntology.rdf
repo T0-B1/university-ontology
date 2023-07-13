@@ -15,7 +15,8 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:untitled-ontology-8="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8">
         <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
     </owl:Ontology>
@@ -178,6 +179,498 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#adr -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#adr">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasAddress"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Address"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#email -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#email">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasEmail"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Email"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#geo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#geo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasGeo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#adr"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasEmail -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasEmail">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#email"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isEmailOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
+        <rdfs:comment xml:lang="it">Per specificare l&apos;indirizzo mail per comunicare con l&apos;oggetto.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha contatto email</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasGeo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasGeo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#geo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasKey -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasKey">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#key"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasLogo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasLogo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#logo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#VCard"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#fn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#VCard"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#fn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#n"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasPhoto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasPhoto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#photo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasSound -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasSound">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#sound"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasTelephone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasTelephone">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#tel"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneOf"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#TelephoneType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#url"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#key -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#key">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasKey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#logo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#logo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasLogo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#n -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#n">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasName"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Name"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#photo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#photo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasPhoto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#sound -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#sound">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasSound"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#tel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#tel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasTelephone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#TelephoneType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#url -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#url">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasURL"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/belongsToDepartment -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/belongsToDepartment">
@@ -233,20 +726,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourse -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourse">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammeYear"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
-        <rdfs:label xml:lang="it">ha insegnamento</rdfs:label>
-        <rdfs:label xml:lang="en">has course</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourseBook -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourseBook">
@@ -287,22 +766,6 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
         <rdfs:label xml:lang="it">ha il dipartimento</rdfs:label>
         <rdfs:label xml:lang="en">has department</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasEdition -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasEdition">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isProgrammeEditionOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Programme"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammeEdition"/>
-        <rdfs:label xml:lang="it">ha edizione del corso di laurea</rdfs:label>
-        <rdfs:label xml:lang="en">has programme edition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -355,6 +818,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasProgrammeEdition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasProgrammeEdition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isProgrammeEditionOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Programme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammeEdition"/>
+        <rdfs:label xml:lang="it">ha edizione del corso di laurea</rdfs:label>
+        <rdfs:label xml:lang="en">has programme edition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasProgrammeYear -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasProgrammeYear">
@@ -380,7 +859,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Campus"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Location"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Room"/>
         <rdfs:label xml:lang="it">ha stanza</rdfs:label>
         <rdfs:label xml:lang="en">has room</rdfs:label>
@@ -397,8 +875,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
         <rdfs:label xml:lang="it">dirigente del dipartimento</rdfs:label>
         <rdfs:label xml:lang="en">head of department</rdfs:label>
@@ -478,19 +954,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isCourseOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CourseEdition"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammeYear"/>
-        <rdfs:label xml:lang="en">is course of</rdfs:label>
-        <rdfs:label xml:lang="it">è insegnamento di</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isDepartmentOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isDepartmentOf">
@@ -509,7 +972,6 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isEmailOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/isEmailOf">
-        <owl:inverseOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
@@ -629,7 +1091,6 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneOf">
-        <owl:inverseOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
@@ -689,496 +1150,6 @@
     
 
 
-    <!-- http://www.w3.org/2006/vcard/ns#adr -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#adr">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasAddress"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#email -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#email">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Email"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#geo -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#geo">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasGeo"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasAddress -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#adr"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasEmail -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#email"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Staff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
-        <rdfs:comment xml:lang="it">Per specificare l&apos;indirizzo mail per comunicare con l&apos;oggetto.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha contatto email</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasGeo -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasGeo">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#geo"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasKey -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasKey">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#key"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasLogo -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasLogo">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#logo"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasMember -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasMember">
-        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#VCard"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasMember"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasMember"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasMember"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasMember"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#fn"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#VCard"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#fn"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasName -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasName">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#n"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasPhoto -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasPhoto">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#photo"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasSound -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasSound">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#sound"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasTelephone -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#tel"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#hasURL -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasURL">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#url"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#key -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#key">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasKey"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#logo -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#logo">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasLogo"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#n -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#n">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasName"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Name"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#photo -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#photo">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasPhoto"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#sound -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#sound">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasSound"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#tel -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#tel">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#url -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#url">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasURL"/>
-    </rdf:Description>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1215,6 +1186,84 @@
     <!-- http://purl.org/ontology/bibo/issn -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/ontology/bibo/issn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#fn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#fn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#organization-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#organization-name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/principalAddress"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/principalAddress"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -1286,7 +1335,6 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasTotalCFU">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Programme"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label xml:lang="it">ha CFU totali</rdfs:label>
         <rdfs:label xml:lang="en">has total CFU</rdfs:label>
@@ -1330,7 +1378,7 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/phoneNumber">
-        <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#TelephoneType"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="it">numero di telefono</rdfs:label>
         <rdfs:label xml:lang="en">phone number</rdfs:label>
@@ -1341,8 +1389,7 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/principalAddress -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/principalAddress">
-        <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="it">indirizzo principale</rdfs:label>
         <rdfs:label xml:lang="en">principal address</rdfs:label>
@@ -1356,6 +1403,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Room"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="it">numero della stanza</rdfs:label>
+        <rdfs:label xml:lang="en">room number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1372,8 +1421,7 @@
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname">
-        <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1381,23 +1429,10 @@
 
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/yearOfProgramme -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/yearOfProgramme"/>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#family-name -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#family-name">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/surname"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#street-address -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/principalAddress"/>
-    </rdf:Description>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/yearOfProgramme">
+        <rdfs:label xml:lang="it">anno del corso di laurea</rdfs:label>
+        <rdfs:label xml:lang="en">year of programme</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -1415,18 +1450,6 @@
     <!-- http://dati.gov.it/onto/dcatapit#Agent -->
 
     <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Agent"/>
-    
-
-
-    <!-- http://dati.gov.it/onto/dcatapit#Standard -->
-
-    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Standard"/>
-    
-
-
-    <!-- http://purl.org/NET/c4dm/event.owl#Event -->
-
-    <owl:Class rdf:about="http://purl.org/NET/c4dm/event.owl#Event"/>
     
 
 
@@ -1456,6 +1479,212 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/ontology/bibo/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Document</rdfs:label>
         <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Address -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Address">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Email -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Email"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Group">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Name">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Organization"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#TelephoneType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#TelephoneType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#VCard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#VCard">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#fn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1801,221 +2030,19 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     
 
 
-    <!-- http://www.w3.org/2006/vcard/ns#Address -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#Group -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Group">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasMember"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasMember"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#Kind -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Kind"/>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#Name -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Name">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
-                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#Organization -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Organization"/>
-    
-
-
-    <!-- http://www.w3.org/2006/vcard/ns#VCard -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#VCard">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#fn"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </rdf:Description>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/Document -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
     
 
 
-    <!-- https://w3id.org/italia/onto/COV/LegalStatus -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/LegalStatus"/>
-    
-
-
-    <!-- https://w3id.org/italia/onto/HER/Area -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/onto/HER/Area"/>
-    
-
-
     <!-- https://w3id.org/italia/onto/HER/ScientificDisciplinarySector -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/HER/ScientificDisciplinarySector"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/HER/ScientificDisciplinarySector">
+        <rdfs:isDefinedBy>https://schema.gov.it/lodview/onto/HER/ScientificDisciplinarySector</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="it">Settore Scientifico Disciplinare</rdfs:label>
+        <rdfs:label xml:lang="en">Sientific Disciplinary Sector</rdfs:label>
+    </owl:Class>
     
 
 
@@ -2034,17 +2061,17 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956">
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
+        <untitled-ontology-8:email rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it"/>
+        <untitled-ontology-8:hasEmail rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it"/>
+        <untitled-ontology-8:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358"/>
+        <untitled-ontology-8:tel rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358"/>
         <belongsToDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna"/>
         <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna"/>
         <workFor rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
-        <ns1:email rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it"/>
-        <ns1:hasEmail rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it"/>
-        <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358"/>
-        <ns1:tel rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358"/>
+        <untitled-ontology-8:family-name>Apollonio</untitled-ontology-8:family-name>
         <firstName>Fabrizio Ivan</firstName>
         <identifiedByOrganizationCode>30956</identifiedByOrganizationCode>
         <surname>Apollonio</surname>
-        <ns1:family-name>Apollonio</ns1:family-name>
         <rdfs:label xml:lang="en">Apollonio Fabrizio Ivan 30956</rdfs:label>
         <rdfs:label xml:lang="it">Apollonio Fabrizio Ivan 30956</rdfs:label>
     </owl:NamedIndividual>
@@ -2055,12 +2082,12 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna">
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
+        <untitled-ontology-8:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <untitled-ontology-8:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
         <headedBy rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956"/>
         <isDepartmentOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
-        <ns1:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
-        <ns1:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <untitled-ontology-8:organization-name>Dipartimento di Architettura</untitled-ontology-8:organization-name>
         <hasAbbreviatedName>DA</hasAbbreviatedName>
-        <ns1:organization-name>Dipartimento di Architettura</ns1:organization-name>
         <rdfs:comment xml:lang="en">Alma Mater Studiorum University of Bologna - Department of Architecture</rdfs:comment>
         <rdfs:comment xml:lang="it">Alma Mater Studiorum Università di Bologna - Dipartimento di Architettura</rdfs:comment>
         <rdfs:label xml:lang="en">UniBo - DA</rdfs:label>
@@ -2072,8 +2099,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/BruceEckel -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/BruceEckel">
+        <untitled-ontology-8:family-name>Eckel</untitled-ontology-8:family-name>
         <firstName>Bruce</firstName>
-        <ns1:family-name>Eckel</ns1:family-name>
         <rdfs:label xml:lang="en">Bruce Eckel</rdfs:label>
         <rdfs:label xml:lang="it">Bruce Eckel</rdfs:label>
     </owl:NamedIndividual>
@@ -2084,11 +2111,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo">
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Campus"/>
+        <untitled-ontology-8:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <untitled-ontology-8:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <untitled-ontology-8:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220"/>
+        <untitled-ontology-8:tel rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220"/>
         <isCampusOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
-        <ns1:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
-        <ns1:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
-        <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220"/>
-        <ns1:tel rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220"/>
         <rdfs:label xml:lang="it">Campus di Cesena</rdfs:label>
         <rdfs:label xml:lang="en">Campus of Cesena</rdfs:label>
     </owl:NamedIndividual>
@@ -2132,12 +2159,12 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna">
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Department"/>
+        <untitled-ontology-8:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <untitled-ontology-8:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
         <headedBy rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/GabrielliMaurizio34486"/>
         <isDepartmentOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
-        <ns1:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
-        <ns1:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena"/>
+        <untitled-ontology-8:organization-name>Dipartimento di Ingegneria e Scienze Informatiche</untitled-ontology-8:organization-name>
         <hasAbbreviatedName>DISI</hasAbbreviatedName>
-        <ns1:organization-name>Dipartimento di Ingegneria e Scienze Informatiche</ns1:organization-name>
         <rdfs:comment xml:lang="en">Alma Mater Studiorum University Of Bologna - Computer Science and Engineering Department</rdfs:comment>
         <rdfs:comment xml:lang="it">Alma Mater Studiorum Università di Bologna - Dipartimento di Ingegneria e Scienze Informatiche</rdfs:comment>
         <rdfs:label xml:lang="en">UniBo - DISI</rdfs:label>
@@ -2166,17 +2193,17 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/GabrielliMaurizio34486">
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
+        <untitled-ontology-8:email rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it"/>
+        <untitled-ontology-8:hasEmail rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it"/>
+        <untitled-ontology-8:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500"/>
+        <untitled-ontology-8:tel rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500"/>
         <belongsToDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
         <headOfDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
         <workFor rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna"/>
-        <ns1:email rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it"/>
-        <ns1:hasEmail rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it"/>
-        <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500"/>
-        <ns1:tel rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500"/>
+        <untitled-ontology-8:family-name>Gabrielli</untitled-ontology-8:family-name>
         <firstName>Maurizio</firstName>
         <identifiedByOrganizationCode>34486</identifiedByOrganizationCode>
         <surname>Gabrielli</surname>
-        <ns1:family-name>Gabrielli</ns1:family-name>
         <rdfs:label xml:lang="en">Gabrielli Maurizio 34486</rdfs:label>
         <rdfs:label xml:lang="it">Gabrielli Maurizio 34486</rdfs:label>
     </owl:NamedIndividual>
@@ -2199,8 +2226,9 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-UniBo">
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/BachelorDegree"/>
-        <hasEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-2022-2023-UniBo"/>
+        <hasProgrammeEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/IngegneriaEScienzeInformatiche-8615-2022-2023-UniBo"/>
         <heldInCampus rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
+        <hasTotalCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasTotalCFU>
         <rdfs:label xml:lang="en">UniBo - ISI - 8615</rdfs:label>
         <rdfs:label xml:lang="it">UniBo - ISI - 8615</rdfs:label>
     </owl:NamedIndividual>
@@ -2343,13 +2371,14 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MirkoViroli35642 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MirkoViroli35642">
+        <untitled-ontology-8:email rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mirko.viroli@unibo.it"/>
+        <untitled-ontology-8:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338846"/>
         <belongsToDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
-        <ns1:email rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/mirko.viroli@unibo.it"/>
-        <ns1:hasTelephone rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338846"/>
+        <belongsToSSD rdf:resource="https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-ING-INF-05"/>
+        <untitled-ontology-8:family-name>Viroli</untitled-ontology-8:family-name>
         <firstName>Mirko</firstName>
         <identifiedByOrganizationCode>35642</identifiedByOrganizationCode>
         <surname>Viroli</surname>
-        <ns1:family-name>Viroli</ns1:family-name>
         <rdfs:label xml:lang="en">Viroli Mirko 35642</rdfs:label>
         <rdfs:label xml:lang="it">Viroli Mirko 35642</rdfs:label>
     </owl:NamedIndividual>
@@ -2373,6 +2402,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
         <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-27-10-2023-CesenaCampus"/>
         <hasLecture rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Lesson-ObjectOrientedProgramming-29-09-2023-CesenaCampus"/>
         <isTaughtBy rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/MirkoViroli35642"/>
+        <isInSemester rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</isInSemester>
         <rdfs:label xml:lang="en">UniBo - ISI - OOP - 70219 - AA - 2023 /2024</rdfs:label>
         <rdfs:label xml:lang="it">UniBo - ISI - OOP - 70219 - AA - 2023 /2024</rdfs:label>
     </owl:NamedIndividual>
@@ -2384,9 +2414,9 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-CampusDiCesena-UniversitàDiBologna">
         <belongsToSSD rdf:resource="https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/SSD-ING-INF-05"/>
         <hasCourseEdition rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ProgrammazioneAdOggetti-70219-2023-2024-CampusDiCesena-UniversitàDiBologna"/>
+        <untitled-ontology-8:given-name>Programmazione ad Oggetti</untitled-ontology-8:given-name>
         <hasCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</hasCFU>
         <identifiedByOrganizationCode>70219</identifiedByOrganizationCode>
-        <ns1:given-name>Programmazione ad Oggetti</ns1:given-name>
         <rdfs:label xml:lang="en">UniBo - ISI - OOP - 70219</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2404,18 +2434,18 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress">
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Address"/>
         <rdf:type>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2423,11 +2453,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2435,11 +2465,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2447,11 +2477,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2459,11 +2489,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2471,12 +2501,12 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                 </owl:unionOf>
             </owl:Class>
         </rdf:type>
+        <untitled-ontology-8:country-name>Italy</untitled-ontology-8:country-name>
+        <untitled-ontology-8:locality>Bologna</untitled-ontology-8:locality>
+        <untitled-ontology-8:postal-code>40126</untitled-ontology-8:postal-code>
+        <untitled-ontology-8:region>Bologna</untitled-ontology-8:region>
+        <untitled-ontology-8:street-address>Via Zamboni 33</untitled-ontology-8:street-address>
         <principalAddress>Via Zamboni 33</principalAddress>
-        <ns1:country-name>Italy</ns1:country-name>
-        <ns1:locality>Bologna</ns1:locality>
-        <ns1:postal-code>40126</ns1:postal-code>
-        <ns1:region>Bologna</ns1:region>
-        <ns1:street-address>Via Zamboni 33</ns1:street-address>
         <rdfs:comment xml:lang="it">Indirizzo dell&apos;università di Bologna</rdfs:comment>
         <rdfs:comment xml:lang="en">University of Bologna Address</rdfs:comment>
         <rdfs:label>Bologna, via Zamboni 33</rdfs:label>
@@ -2488,13 +2518,13 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversitàDiBologna">
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Organization"/>
+        <untitled-ontology-8:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress"/>
+        <untitled-ontology-8:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress"/>
         <hasCampus rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/CesenaCampusUniBo"/>
         <hasDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ArchitectureDepartment-UniversityOfBologna"/>
         <hasDepartment rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ComputerScienceAndEngineering-UniversityOfBologna"/>
-        <ns1:adr rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress"/>
-        <ns1:hasAddress rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/UniversityOfBolognaAddress"/>
+        <untitled-ontology-8:organization-name>Alma Mater Sutiorum - Università di Bologna</untitled-ontology-8:organization-name>
         <hasAbbreviatedName>UniBo</hasAbbreviatedName>
-        <ns1:organization-name>Alma Mater Sutiorum - Università di Bologna</ns1:organization-name>
         <rdfs:label xml:lang="en">Alma Mater Studiorum - University of Bologna</rdfs:label>
         <rdfs:label xml:lang="it">Alma Mater Studiorum - Università di Bologna</rdfs:label>
     </owl:NamedIndividual>
@@ -2504,18 +2534,18 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ViaDellUniversità50Cesena">
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Address"/>
         <rdf:type>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2523,11 +2553,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2535,11 +2565,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2547,11 +2577,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2559,11 +2589,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
                                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
                                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -2571,12 +2601,12 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                 </owl:unionOf>
             </owl:Class>
         </rdf:type>
+        <untitled-ontology-8:country-name>Italy</untitled-ontology-8:country-name>
+        <untitled-ontology-8:locality>Cesena</untitled-ontology-8:locality>
+        <untitled-ontology-8:postal-code>47521</untitled-ontology-8:postal-code>
+        <untitled-ontology-8:region>Forlì-Cesena</untitled-ontology-8:region>
+        <untitled-ontology-8:street-address>Via dell&apos;Università 50</untitled-ontology-8:street-address>
         <principalAddress>Via dell&apos;Università 50</principalAddress>
-        <ns1:country-name>Italy</ns1:country-name>
-        <ns1:locality>Cesena</ns1:locality>
-        <ns1:postal-code>47521</ns1:postal-code>
-        <ns1:region>Forlì-Cesena</ns1:region>
-        <ns1:street-address>Via dell&apos;Università 50</ns1:street-address>
         <rdfs:label xml:lang="en">Cesena, via dell&apos;università 50</rdfs:label>
         <rdfs:label xml:lang="it">Cesena, via dell&apos;università 50</rdfs:label>
     </owl:NamedIndividual>
@@ -2599,7 +2629,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390512094500">
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#TelephoneType"/>
         <phoneNumber>+390512094500</phoneNumber>
         <rdfs:comment xml:lang="it">Numero di telefono del Professore Maurizio Gabrielli</rdfs:comment>
     </owl:NamedIndividual>
@@ -2609,7 +2639,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/+390547338358">
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#TelephoneType"/>
         <phoneNumber>+390547338358</phoneNumber>
         <rdfs:comment xml:lang="it">Numero di telefono del Professore Fabrizio Ivan Apollonio</rdfs:comment>
     </owl:NamedIndividual>
@@ -2628,7 +2658,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/0547338220">
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#TelephoneType"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#TelephoneType"/>
         <phoneNumber>0547338220</phoneNumber>
         <rdfs:comment xml:lang="it">Numero di telefono dell&apos;università di Cesena</rdfs:comment>
     </owl:NamedIndividual>
@@ -2658,8 +2688,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/fabrizio.apollonio@unibo.it">
+        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Email"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Email"/>
         <isEmailOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/ApollonioFabrizioIvan-UniBo-30956"/>
         <mailContact>fabrizio.apollonio@unibo.it</mailContact>
         <rdfs:label>fabrizio.apollonio@unibo.it</rdfs:label>
@@ -2670,8 +2700,8 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <!-- http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/maurizio.gabbrielli@unibo.it">
+        <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Email"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Email"/>
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Email"/>
         <isEmailOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/GabrielliMaurizio34486"/>
         <mailContact>maurizio.gabrielli@unibo.it</mailContact>
         <rdfs:label xml:lang="en">maurizio.gabbrielli@unibo.it</rdfs:label>
@@ -2721,31 +2751,31 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasMember"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasMember"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#hasMember"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Kind"/>
             </owl:Restriction>
         </owl:intersectionOf>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Group"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Group"/>
     </owl:Class>
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2753,161 +2783,17 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2915,17 +2801,125 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2933,17 +2927,17 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2951,17 +2945,17 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2969,71 +2963,35 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3041,17 +2999,17 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3059,17 +3017,17 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3077,17 +3035,89 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </owl:intersectionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3097,11 +3127,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#additional-name"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#additional-name"/>
                         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3109,11 +3139,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#family-name"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#family-name"/>
                         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3121,11 +3151,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#given-name"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#given-name"/>
                         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3133,11 +3163,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-prefix"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-prefix"/>
                         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3145,28 +3175,28 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#honorific-suffix"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#honorific-suffix"/>
                         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Name"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Name"/>
     </owl:Class>
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#country-name"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#country-name"/>
                         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3174,11 +3204,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#locality"/>
                         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3186,11 +3216,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#postal-code"/>
                         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3198,11 +3228,11 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#region"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#region"/>
                         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3210,17 +3240,17 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#street-address"/>
                         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8#Address"/>
     </owl:Class>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
@@ -3265,6 +3295,9 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/aa">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pa">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/exam">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
@@ -3272,6 +3305,15 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/lesson">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pr">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/cfu">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prE">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof">
@@ -3422,7 +3464,20 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                                         <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/aa"/>
                                     </rdf:Description>
                                 </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasCourseEdition"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/py"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pa"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
                             </rdf:Description>
                         </rdf:rest>
                     </rdf:Description>
@@ -3561,6 +3616,65 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
+        <rdfs:label>Program Edition has same total CFU of Programme</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Programme"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pr"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasTotalCFU"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pr"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/cfu"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasProgrammeEdition"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/pr"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prE"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/hasTotalCFU"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prE"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/cfu"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
         <rdfs:label>Staff head of department belongs to department and is a Professor</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -3606,7 +3720,7 @@ Questo tipo di laurea è comunemente offerto in settori come medicina, odontoiat
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/Professor"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/AcademicStaff"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/angel/ontologies/2023/5/untitled-ontology-8/prof"/>
                             </rdf:Description>
                         </rdf:first>
